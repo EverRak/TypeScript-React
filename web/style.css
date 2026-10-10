@@ -1,0 +1,30 @@
+body
+{
+    background-color: #eee;
+    color: #111;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+}
+
+a
+{
+    color: #08f;
+}
+
+nav
+{
+    padding: 5px;
+    background-color: #ddd;
+}
+
+button,
+input
+{
+    margin: 0 0 5px 0;
+    background-color: #333;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    color: #eee;
+}

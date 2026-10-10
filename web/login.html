@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+<body onload="dados()">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="login.html">Login</a>
+    </nav>
+    <div class="container">
+        <h2>Login</h2>
+        <form>
+            <input type="text" class="caixa" id="login" placeholder="Insira seu login...">
+            <br>
+            <input type="password" class="caixa" id="senha" placeholder="Insira sua senha...">
+        </form>
+        <br>
+        <button onclick="logar()">Login</button>
+        <br>
+        <br>
+        <a href="cadastro.html">Cadastro</a>
+    </div>
+    <script src="./src/dados.js"></script>
+</body>
+</html>
