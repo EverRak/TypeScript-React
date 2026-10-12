@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sign.css">
     <title>Cadastro</title>
 </head>
 <body onload="dados()">
@@ -11,23 +12,26 @@
         <a href="index.html">Home</a>
         <a href="cadastro.html">Cadastro</a>
         <a href="login.html">Login</a>
+        <hr>
     </nav>
     <h2>Cadastro</h2>
     <div class="container">
-        <form>
-            <input type="text" class="caixa" id="login" placeholder="Crie seu login...">
+        <div class="form-container">
+            <form>
+                <input type="text" class="caixa" id="login" placeholder="Crie seu login...">
+                <br>
+                <input type="password" class="caixa" id="senha" placeholder="Crie sua senha...">
+                <br>
+                <input type="text" class="caixa" id="nome" placeholder="Insira seu nome...">
+                <br>
+                <input type="text" class="caixa" id="email" placeholder="Insira seu e-mail...">
+            </form>
             <br>
-            <input type="password" class="caixa" id="senha" placeholder="Crie sua senha...">
+            <button class="primary-button" onclick="adicionar()">Cadastrar</button>
             <br>
-            <input type="text" class="caixa" id="nome" placeholder="Insira seu nome...">
             <br>
-            <input type="text" class="caixa" id="email" placeholder="Insira seu e-mail...">
-        </form>
-        <br>
-        <button onclick="adicionar()">Cadastrar</button>
-        <br>
-        <br>
-        <a href="login.html">Login</a>
+            <a href="login.html">Login</a>
+        </div>
     </div>
 
     <script src="./src/dados.js"></script>

@@ -1,0 +1,44 @@
+:root
+{
+    /* Backgrounds */
+    --color-bg: #111111;
+    --color-bg-secondary: #101010;
+    --color-surface: #21211F;
+    --color-surface-hover: #292927;
+    --color-surface-input: #1A1A1A;
+    --color-surface-image: #1C1C1A;
+
+    /* Borders */
+    --color-border: #383838;
+    --color-border-subtle: #292929;
+    --color-border-active: #C6F273;
+
+    /* Primary accent — Lime */
+    --color-primary: #C6F273;
+    --color-primary-hover: #B5E65D;
+    --color-primary-muted: #536B35;
+    --color-primary-bg: #1F201D;
+
+    /* Secondary accent — Silver */
+    --color-secondary: #E5E7EB;
+    --color-secondary-hover: #FFFFFF;
+    --color-secondary-muted: #AEB4BE;
+    --color-secondary-bg: #292C31;
+
+    /* Text */
+    --color-text: #F2F2F2;
+    --color-text-secondary: #A0A0A0;
+    --color-text-muted: #737373;
+    --color-text-inverse: #111111;
+
+    /* Components */
+    --color-card: #21211F;
+    --color-card-selected: #1F201D;
+    --color-input-bg: #1A1A1A;
+    --color-badge-bg: #30302D;
+    --color-divider: #292929;
+
+    /* States */
+    --color-success: #C6F273;
+    --color-focus: #E5E7EB;
+}

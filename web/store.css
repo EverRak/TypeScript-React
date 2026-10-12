@@ -1,10 +1,56 @@
+:root 
+{
+    /* Backgrounds */
+    --color-bg: #111111;
+    --color-bg-secondary: #101010;
+    --color-surface: #21211F;
+    --color-surface-hover: #292927;
+    --color-surface-input: #1A1A1A;
+    --color-surface-image: #1C1C1A;
+
+    /* Borders */
+    --color-border: #383838;
+    --color-border-subtle: #292929;
+    --color-border-active: #C6F273;
+
+    /* Primary accent — Lime */
+    --color-primary: #C6F273;
+    --color-primary-hover: #B5E65D;
+    --color-primary-muted: #536B35;
+    --color-primary-bg: #1F201D;
+
+    /* Secondary accent — Silver */
+    --color-secondary: #E5E7EB;
+    --color-secondary-hover: #FFFFFF;
+    --color-secondary-muted: #AEB4BE;
+    --color-secondary-bg: #292C31;
+
+    /* Text */
+    --color-text: #F2F2F2;
+    --color-text-secondary: #A0A0A0;
+    --color-text-muted: #737373;
+    --color-text-inverse: #111111;
+
+    /* Components */
+    --color-card: #21211F;
+    --color-card-selected: #1F201D;
+    --color-input-bg: #1A1A1A;
+    --color-badge-bg: #30302D;
+    --color-divider: #292929;
+
+    /* States */
+    --color-success: #C6F273;
+    --color-focus: #E5E7EB;
+}
+
 .carousel
 {
     border-radius: 5px;
     padding: 5px;
-    background-color: #0cf;
+    /* background-color: #0cf; */
     display: flex;
-    gap: 5px;
+    justify-content: center;
+    gap: 25px;
 }
 
 .carousel-item
@@ -12,21 +58,40 @@
     overflow: hidden;
     padding: 5px;
     border-radius: 5px;
-    height: 225px;
-    width: 150px;
-    background-color: #eee;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--color-border);
+    height: 425px;
+    width: 270px;
+    background-color: var(--color-surface);
     transition: 0.2s;
 }
 
 .carousel-item:hover
 {
     box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+    border-color: var(--color-border-active);
+    cursor: pointer;
     /* transform: translateY(-1px); */
 }
 
-.carousel-item p
+.description-container
+{
+    padding: 10px;
+}
+
+.description-container h3
+{
+    margin: 5px 0 0 2px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.description-container p
 {
     font-size: 14px;
+    color: var(--color-text-secondary);
     padding: 2px;
     margin: 0;
     white-space: nowrap;
@@ -37,7 +102,7 @@
 .img-container
 {
     width: 100%;
-    height: 200px;
+    height: 300px;
     overflow: hidden;
     border-radius: 5px;
 }
@@ -52,5 +117,22 @@
 
 .img-container img:hover
 {
-    transform: scale(1.2);
+    transform: translateY(1px);
+}
+
+.promotion-blob
+{
+    background-color: var(--color-primary-muted);
+    padding: 2px 6px;
+    margin: 3px 0;
+    font-weight: 500;
+    border-radius: 20px;
+    color: var(--color-primary);
+    width: fit-content;
+    height: fit-content;
+}
+
+.promotion-blob h6
+{
+    margin: 1px;
 }
