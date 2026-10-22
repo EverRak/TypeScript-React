@@ -42,3 +42,8 @@
     --color-success: #C6F273;
     --color-focus: #E5E7EB;
 }
+
+.form-container
+{
+    position: fixed;
+}

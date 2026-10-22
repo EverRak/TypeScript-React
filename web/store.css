@@ -45,12 +45,12 @@
 
 .carousel
 {
-    border-radius: 5px;
+    /* border-radius: 5px; */
     padding: 5px;
-    /* background-color: #0cf; */
-    display: flex;
-    justify-content: center;
-    gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    justify-items: center;
+    gap: 25px 0;
 }
 
 .carousel-item
@@ -61,8 +61,8 @@
     border-width: 1px;
     border-style: solid;
     border-color: var(--color-border);
-    height: 425px;
-    width: 270px;
+    height: clamp(290px, 44.5vh, 440px);
+    width: clamp(200px, 15vw, 300px);
     background-color: var(--color-surface);
     transition: 0.2s;
 }
@@ -82,7 +82,22 @@
 
 .description-container h3
 {
+    margin: 2px 0 0 2px;
+    font-size: clamp(10px, 1vw, 18.72px);
+    /* white-space: nowrap;
+    text-overflow: ellipsis; */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    /* overflow: hidden; */
+    overflow: hidden;
+    font-weight: 200;
+}
+
+.description-container h2
+{
     margin: 5px 0 0 2px;
+    font-size: clamp(10px, 1vw, 18.72px);
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -90,7 +105,7 @@
 
 .description-container p
 {
-    font-size: 14px;
+    font-size: clamp(8px, .7vw, 14px);
     color: var(--color-text-secondary);
     padding: 2px;
     margin: 0;
@@ -102,7 +117,7 @@
 .img-container
 {
     width: 100%;
-    height: 300px;
+    height: clamp(110px, 30vh, 300px);
     overflow: hidden;
     border-radius: 5px;
 }
@@ -118,6 +133,13 @@
 .img-container img:hover
 {
     transform: translateY(1px);
+}
+
+.price-part
+{
+    margin-top: 1vh;
+    display: flex;
+    justify-content: space-between;
 }
 
 .promotion-blob
