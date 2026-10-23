@@ -1,13 +1,14 @@
-import Store from './storage.js';
 
-const store = new Store();
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 
-const btnCadastrar = document.querySelector("#btn_1") as HTMLButtonElement;
+import App from "./App";
+import "./styles/style.css";
+import "./styles/store.css";
+import "./styles/sign.css";
 
-btnCadastrar?.addEventListener("click", () =>
-{
-
-    store.cadastro({ id: 0, login: "", senha: "", nome: "", email: "" });
-
-    alert("Cadastrado com sucesso!");
-});
+createRoot(document.getElementById("root")!).render(
+    <StrictMode>
+        <App />
+    </StrictMode>
+);
