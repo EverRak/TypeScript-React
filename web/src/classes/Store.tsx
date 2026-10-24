@@ -169,4 +169,33 @@ export default class Store {
 
         return JSON.parse(dados) as Omit<IForm, "senha">;
     }
+
+    static adicionarAoCarrinho(
+        produto: Omit<IProdutoCarrinho, "qtd" | "total" | "pg">
+    ): void {
+        const carrinhoSalvo = localStorage.getItem("carrinho");
+
+        const carrinho: IProdutoCarrinho[] = carrinhoSalvo
+            ? JSON.parse(carrinhoSalvo)
+            : [];
+
+        // Remove o item vazio usado como inicialização do carrinho
+        const itens = carrinho.filter(item => item.id !== 0);
+
+        const existente = itens.find(item => item.id === produto.id);
+
+        if (existente) {
+            existente.qtd++;
+            existente.total = existente.qtd * existente.valor;
+        } else {
+            itens.push({
+                ...produto,
+                qtd: 1,
+                total: produto.valor,
+                pg: ""
+            });
+        }
+
+        localStorage.setItem("carrinho", JSON.stringify(itens));
+    }
 }

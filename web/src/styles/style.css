@@ -43,12 +43,22 @@
     --color-focus: #E5E7EB;
 }
 
+html
+{
+    overflow-y: scroll;
+}
+
 body
 {
     background-color: var(--color-bg);
     color: var(--color-text);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 10px 30px;
+}
+
+.page-content
+{
+    /* padding: 30px; */
+    padding: 10vh 5vw;
 }
 
 a
@@ -63,13 +73,24 @@ a:hover
     color: var(--color-secondary);
 }
 
+/* nav
+{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 15px 30px 15px 30px;
+    background-color: var(--color-bg);
+    z-index: 999;
+}
+
 nav a
 {
     color: var(--color-primary);
     text-decoration: none;
     padding-bottom: 0px;
     border-bottom: 0px solid transparent;
-    font-size: x-large;
+    font-size: 1.4vw;
     margin-right: 10px;
     transition: 0.2s;
 }
@@ -78,33 +99,156 @@ nav a:hover
 {
     padding-bottom: 3px;
     border-bottom: 1px solid var(--color-primary);
+} */
+
+.profile-part
+{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    text-align: center;
 }
 
-hr
+.profile-part p
 {
-    border-color: var(--color-border-subtle);
+    font-size: 1vw;
+    margin: 0;
 }
 
 nav
 {
-    padding: 5px;
-    background-color: var(--detail);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 30px;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+
+    z-index: 1000;
 }
+
+.nav-left,
+.nav-right
+{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav a
+{
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+nav a:hover
+{
+    color: var(--color-primary);
+}
+
+/* Loja */
+.nav-brand
+{
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* Cadastro */
+/* .nav-register
+{
+    padding: 9px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+}
+
+/* Login */
+/* .nav-login
+{
+    padding: 9px 14px;
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+    border-radius: 5px;
+} */
+
+/* .nav-login:hover
+{
+    background-color: var(--color-primary-hover);
+    color: var(--color-text-inverse);
+} */
+
+.profile-link
+{
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.profile-picture
+{
+    width: 2.5vw;
+    height: 2.5vw;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--color-border);
+    transition: 0.2s;
+}
+
+.profile-picture:hover
+{
+    border-color: var(--color-primary);
+    cursor: pointer;
+}
+
+/* hr
+{
+    border-color: var(--color-border-subtle);
+} */
 
 .primary-button
 {
+    color: var(--color-text-inverse);
     background-color: var(--color-primary);
     color: var(--color-text-inverse);
     border: 1px solid transparent;
     padding: 10px 15px;
     border-radius: 5px;
+    border: 1px solid var(--color-border);
     transition: 0.2s;
 }
 
 .primary-button:hover
 {
+    color: var(--color-text);
     cursor: pointer;
-    background-color: var(--color-primary-hover);
+    background-color: var(--color-primary-bg);
+}
+
+.secondary-button
+{
+    box-sizing: border-box;
+    padding: 10px 15px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    background-color: var(--color-surface);
+    transition: 0.2s;
+}
+
+.secondary-button:hover
+{
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+    border-color: var(--color-border-active);
+    cursor: pointer;
+    /* transform: translateY(-1px); */
 }
 
 input

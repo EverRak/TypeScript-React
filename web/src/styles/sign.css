@@ -1,49 +1,259 @@
-:root
+
+/* LOGIN E CADASTRO */
+
+main:has(.form-container) 
 {
-    /* Backgrounds */
-    --color-bg: #111111;
-    --color-bg-secondary: #101010;
-    --color-surface: #21211F;
-    --color-surface-hover: #292927;
-    --color-surface-input: #1A1A1A;
-    --color-surface-image: #1C1C1A;
+    box-sizing: border-box;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
 
-    /* Borders */
-    --color-border: #383838;
-    --color-border-subtle: #292929;
-    --color-border-active: #C6F273;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    /* Primary accent — Lime */
-    --color-primary: #C6F273;
-    --color-primary-hover: #B5E65D;
-    --color-primary-muted: #536B35;
-    --color-primary-bg: #1F201D;
+    padding: 65px 16px 10px;
 
-    /* Secondary accent — Silver */
-    --color-secondary: #E5E7EB;
-    --color-secondary-hover: #FFFFFF;
-    --color-secondary-muted: #AEB4BE;
-    --color-secondary-bg: #292C31;
+    overflow: visible;
 
-    /* Text */
-    --color-text: #F2F2F2;
-    --color-text-secondary: #A0A0A0;
-    --color-text-muted: #737373;
-    --color-text-inverse: #111111;
-
-    /* Components */
-    --color-card: #21211F;
-    --color-card-selected: #1F201D;
-    --color-input-bg: #1A1A1A;
-    --color-badge-bg: #30302D;
-    --color-divider: #292929;
-
-    /* States */
-    --color-success: #C6F273;
-    --color-focus: #E5E7EB;
+    background:
+        radial-gradient(ellipse at 15% 20%, #c6f2730d, transparent 38%),
+        radial-gradient(ellipse at 90% 85%, #c6f2730a, transparent 35%),
+        var(--color-bg);
 }
 
-.form-container
+main:has(.form-container) > .container 
 {
-    position: fixed;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 380px;
+    min-width: 0;
+    margin: 0 auto;
+}
+
+.form-container 
+{
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px 24px;
+
+    background: linear-gradient(145deg, var(--color-surface), #191a18);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    box-shadow: 0 15px 45px #00000030;
+
+    animation: sign-appear 0.3s ease both;
+}
+
+.form-container::before 
+{
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 25px;
+    right: 25px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+}
+
+.form-container h2 
+{
+    margin: 0;
+    color: var(--color-text);
+    font-size: 25px;
+    line-height: 1.2;
+    letter-spacing: -0.6px;
+}
+
+.form-container h2::after 
+{
+    display: block;
+    margin-top: 5px;
+    color: var(--color-text-secondary);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0;
+    content: "Acesse sua conta para continuar.";
+}
+
+.form-container:has(input[type="email"]) h2::after 
+{
+    content: "Crie sua conta e comece a explorar.";
+}
+
+.form-container form 
+{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-top: 14px;
+}
+
+.form-container form br 
+{
+    display: none;
+}
+
+.form-container input.caixa 
+{
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    min-width: 0;
+    min-height: 38px;
+    height: 38px;
+
+    margin: 0;
+    padding: 8px 11px;
+
+    background: var(--color-surface-input);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    outline: none;
+
+    font-family: inherit;
+    font-size: 12px;
+
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-container input.caixa::placeholder 
+{
+    color: var(--color-text-muted);
+}
+
+.form-container input.caixa:focus 
+{
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px #c6f27315;
+}
+
+.form-container .primary-button 
+{
+    width: 100%;
+    min-height: 39px;
+    margin-top: 3px;
+    padding: 9px 12px;
+
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
+    border: 1px solid transparent;
+    border-radius: 6px;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+
+    transition: background-color 0.2s;
+}
+
+.form-container .primary-button:hover 
+{
+    background: var(--color-primary-hover);
+}
+
+.form-container > a 
+{
+    display: block;
+    margin-top: 12px;
+    padding-top: 10px;
+
+    border-top: 1px solid var(--color-border-subtle);
+    color: var(--color-text-secondary);
+
+    text-align: center;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.form-container > a:hover 
+{
+    color: var(--color-primary);
+}
+
+.form-container > a::after 
+{
+    content: " →";
+    color: var(--color-primary);
+}
+
+@keyframes sign-appear 
+{
+    from 
+    {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to 
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Telas baixas: prioriza mostrar o formulário inteiro */
+
+@media (max-height: 750px) 
+{
+    main:has(.form-container) 
+    {
+        align-items: flex-start;
+        padding-top: 65px;
+        padding-bottom: 12px;
+    }
+
+    .form-container 
+    {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .form-container form 
+    {
+        gap: 6px;
+        margin-top: 10px;
+    }
+
+    .form-container input.caixa 
+    {
+        height: 35px;
+        min-height: 35px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+
+    .form-container > a 
+    {
+        margin-top: 9px;
+        padding-top: 8px;
+    }
+}
+
+/* Celulares */
+
+@media (max-width: 480px) 
+{
+    main:has(.form-container) 
+    {
+        padding-right: 14px;
+        padding-left: 14px;
+    }
+
+    .form-container 
+    {
+        padding-right: 19px;
+        padding-left: 19px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) 
+{
+    .form-container 
+    {
+        animation: none;
+    }
 }

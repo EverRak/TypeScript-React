@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from "react";
-import Store from "../Store";
+import Store from "../classes/Store";
 import "../styles/style.css";
 import "../styles/sign.css";
 import { Link } from "react-router-dom";
@@ -43,7 +43,6 @@ export default function Cadastro() {
                             onChange={(e) => setLogin(e.target.value)}
                             required
                         />
-                        <br />
 
                         <input
                             type="password"
@@ -53,7 +52,6 @@ export default function Cadastro() {
                             onChange={(e) => setSenha(e.target.value)}
                             required
                         />
-                        <br />
 
                         <input
                             type="text"
@@ -63,7 +61,6 @@ export default function Cadastro() {
                             onChange={(e) => setNome(e.target.value)}
                             required
                         />
-                        <br />
 
                         <input
                             type="email"
@@ -73,16 +70,13 @@ export default function Cadastro() {
                             onChange={(e) => setEmail(e.target.value)}
                             required
                         />
-                        <br />
-                        <br />
 
                         <button type="submit" className="primary-button">
                             Cadastrar
                         </button>
                     </form>
 
-                    <br />
-                    <Link to="/Login">Login</Link>
+                    <Link to="/login">Login</Link>
                 </div>
             </div>
         </main>
