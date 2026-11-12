@@ -4,7 +4,7 @@
 
 Este repositório reúne estudos e práticas de desenvolvimento de software com **TypeScript** e **React**, com ênfase nos fundamentos da **Programação Orientada a Objetos (POO)** e na aplicação desses conceitos em projetos para a web.
 
-O trabalho tem caráter acadêmico e é desenvolvido com o acompanhamento do **professor Bruno Zolotareff**. A proposta é aprender por meio da prática: explorar ferramentas e conceitos, organizar o código e construir uma base sólida para o desenvolvimento de aplicações.
+O trabalho foi desenvolvido por **Pedro Henrique Montanari** e **Murillo Dias Solis**, com o acompanhamento do **professor Bruno Zolotareff**. A proposta é aprender por meio da prática: explorar ferramentas e conceitos, organizar o código e construir uma base sólida para o desenvolvimento de aplicações.
 
 ## Objetivos
 
@@ -27,5 +27,6 @@ Este projeto faz parte de um processo de aprendizagem orientado, no qual os cont
 
 ---
 
+**Autores:** Pedro Henrique Montanari e Murillo Dias Solis  
 **Acompanhamento:** Prof. Bruno Zolotareff  
 **Tema de estudo:** TypeScript, React e Programação Orientada a Objetos
